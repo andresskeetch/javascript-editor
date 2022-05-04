@@ -26,9 +26,12 @@ const MainEditor = () => {
       <div className={styles.result}>
         {output.map((line: string, index: number) => {
           return (
-            <div key={`result-line-${index}`}>
-              {line ? JSON.stringify(line) : "..."}
-            </div>
+            <div
+              key={`result-line-${index}`}
+              dangerouslySetInnerHTML={{
+                __html: line ? JSON.stringify(line) : "...",
+              }}
+            />
           );
         })}
       </div>
