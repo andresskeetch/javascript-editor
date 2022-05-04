@@ -1,10 +1,10 @@
 import React from "react";
 import Editor from "@monaco-editor/react";
 import styles from "./styles.module.css";
-import { DEFAULT_CODE, LINE_EDITOR } from "../../utilities/constants";
-import { useConsole } from "../../hooks/useConsole";
+import CONFIG from "../../utilities/constants";
+import useConsole from "../../hooks/useConsole";
 
-export const MainEditor = () => {
+const MainEditor = () => {
   const { output, setOutPut } = useConsole();
   const onChangeEditor = (newValue?: string) => {
     setOutPut([]);
@@ -18,8 +18,8 @@ export const MainEditor = () => {
         defaultLanguage="javascript"
         theme="vs-dark"
         width="50vw"
-        defaultValue={DEFAULT_CODE}
-        line={LINE_EDITOR}
+        defaultValue={CONFIG.DEFAULT_CODE}
+        line={CONFIG.LINE_EDITOR}
         saveViewState={true}
         onChange={onChangeEditor}
       />
@@ -35,3 +35,5 @@ export const MainEditor = () => {
     </div>
   );
 };
+
+export default MainEditor;

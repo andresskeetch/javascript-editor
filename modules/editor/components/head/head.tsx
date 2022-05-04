@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 
-export const HeadEditor = () => {
+const HeadEditor = () => {
   return (
     <Head>
       <title>Editor APP RUNNER ONLINE</title>
@@ -10,3 +10,5 @@ export const HeadEditor = () => {
     </Head>
   );
 };
+
+export default HeadEditor;

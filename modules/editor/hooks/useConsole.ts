@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useConsole = () => {
+const useConsole = () => {
   const [output, setOutPut] = useState<string[]>([]);
 
   useEffect(() => {
@@ -15,3 +15,5 @@ export const useConsole = () => {
     setOutPut,
   };
 };
+
+export default useConsole;
